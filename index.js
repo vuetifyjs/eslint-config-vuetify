@@ -1,8 +1,11 @@
 module.exports = {
-  extends: ['standard', 'plugin:vue/recommended'],
+  extends: [
+    'standard',
+    'plugin:vue/recommended'
+  ],
 
   parserOptions: {
-    parser: require.resolve('babel-eslint'),
+    parser: 'babel-eslint',
     ecmaVersion: 2017,
     sourceType: 'module'
   },
@@ -17,6 +20,7 @@ module.exports = {
       }
     }]
   },
+
   overrides: [
     {
       files: '**/*.vue',

@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "eslint config for vue.js projects",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vuejs/eslint-config-vue.git"
-  },
   "keywords": [
     "eslint",
     "vue",
@@ -19,6 +15,11 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^4.7.1"
   }
 }
