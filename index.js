@@ -11,6 +11,7 @@ module.exports = {
   },
 
   rules: {
+    'comma-dangle': ['error', 'always-multiline'],
     'max-len': 'off',
     'indent': 'off',
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
