@@ -4,6 +4,8 @@ module.exports = {
     'plugin:vue/recommended'
   ],
 
+  plugins: ['vuetify'],
+
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 2017,
@@ -32,6 +34,9 @@ module.exports = {
       'multiline': 'always'
     }],
     'vue/html-closing-bracket-spacing': 'error',
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    'vuetify/no-deprecated-classes': 'error',
+    'vuetify/grid-unknown-attributes': 'error',
+    'vuetify/no-legacy-grid': 'error'
   }
 }
