@@ -42,4 +42,4 @@ Update your `.eslintrc.`* to _extend_ vuetify:
 ### 📑 License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present John Leider
+Copyright (c) 2016-present Vuetify LLC
