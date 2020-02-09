@@ -34,7 +34,9 @@ module.exports = {
       'multiline': 'always'
     }],
     'vue/html-closing-bracket-spacing': 'error',
+    'vue/no-unused-components': 'warn',
     'vue/no-v-html': 'off',
+    'vue/require-default-prop': 'off',
     'vuetify/no-deprecated-classes': 'error',
     'vuetify/grid-unknown-attributes': 'error',
     'vuetify/no-legacy-grid': 'error'
