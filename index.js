@@ -16,6 +16,9 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'max-len': 'off',
     'indent': 'off',
+    // Workaround for ESLint failing to parse files with template literals
+    // with this error: "TypeError: Cannot read property 'range' of null"
+    'template-curly-spacing': 'off',
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     'vue/script-indent': ['error', 2, {
       'baseIndent': 1,
