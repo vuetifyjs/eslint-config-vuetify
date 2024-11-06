@@ -1,10 +1,8 @@
 import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
 
 export default [
   ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig(),
   {
     name: 'app/files-to-lint',
     files: ['**/*.{js,mjs,jsx,ts,mts,tsx,vue}'],
