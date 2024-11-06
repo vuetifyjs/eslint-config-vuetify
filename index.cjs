@@ -6,13 +6,13 @@ export default [
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
   {
-		name: 'app/files-to-lint',
+    name: 'app/files-to-lint',
     files: '**/*.vue',
     languageOptions: {
-			globals: {
-				...globals.node,
-			},
-		},
+      globals: {
+        ...globals.node,
+      },
+    },
     rules: {
       'no-var': 'error',
       // allow paren-less arrow functions
@@ -96,35 +96,3 @@ export default [
     }
   }
 ]
-
-
-module.exports = {
-  overrides: [
-    {
-      files: '**/*.vue',
-      rules: {
-        indent: 'off',
-        'vue/script-indent': ['error', 2, {
-          baseIndent: 1,
-          switchCase: 1,
-          ignores: [],
-        }],
-        'vue/html-closing-bracket-newline': ['error', {
-          singleline: 'never',
-          multiline: 'always',
-        }],
-        'vue/html-closing-bracket-spacing': 'error',
-        'vue/max-attributes-per-line': ['error', {
-          singleline: 4,
-          multiline: 1,
-        }],
-        'vue/valid-v-on': 'off', // This rule doesn't allow empty event listeners
-        'vue/no-v-html': 'off',
-        'vue/singleline-html-element-content-newline': 'off',
-        'vue/multiline-html-element-content-newline': 'off',
-        'vue/valid-v-slot': ['error', { allowModifiers: true }],
-        'vue/multi-word-component-names': 'off',
-      },
-    },
-  ],
-}
