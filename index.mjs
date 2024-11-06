@@ -79,7 +79,7 @@ export default [
 
   {
     name: 'app/overrides',
-    files: '**/*.vue',
+    files: ['**/*.vue'],
     rules: {
       indent: 'off',
       'vue/html-closing-bracket-newline': ['error', {
