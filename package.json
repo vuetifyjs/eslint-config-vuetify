@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-vuetify",
-  "version": "2.0.2",
+  "version": "2.0.1",
   "description": "eslint config for vue.js projects",
   "main": "index.mjs",
   "type": "module",
