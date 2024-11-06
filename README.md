@@ -1,7 +1,9 @@
 # eslint-config-vuetify
+>
 > An opinionated eslint config for Vuetify.
 
 ### 💿 Install
+
 ```bash
 yarn add eslint-config-vuetify -D
 # OR
@@ -9,14 +11,19 @@ npm install eslint-config-vuetify --save-dev
 ```
 
 ### 🚀 Usage
-Update your `.eslintrc.`* to _extend_ vuetify:
+
+Update your `eslint.config.js` flat config to _extend_ vuetify:
+
 ```js
-{
-  "extends": "vuetify"
-}
+import vuetify from 'eslint-config-vuetify';
+
+export default [
+  ...vuetify,
+]
 ```
 
 ### 💪 Supporting Vuetify
+
 <p>Vuetify is an open source MIT project that has been made possible due to the generous contributions by <a href="https://github.com/vuetifyjs/vuetify/blob/dev/BACKERS.md">community backers</a>. If you are interested in supporting this project, please consider:</p>
 
 <ul>
@@ -40,6 +47,7 @@ Update your `.eslintrc.`* to _extend_ vuetify:
 </ul>
 
 ### 📑 License
+
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016-present Vuetify LLC
