@@ -3,7 +3,7 @@
   "version": "2.0.2",
   "description": "eslint config for vue.js projects",
   "main": "index.js.mjs",
-	"module": "index.ts.mjs",
+  "module": "index.ts.mjs",
   "type": "module",
   "repository": {
     "type": "git",
