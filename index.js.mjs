@@ -3,7 +3,7 @@ import globals from 'globals'
 import eslint from '@eslint/js'
 
 export default [
-  eslint.configs.standard,
+  eslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
     name: 'app/files-to-lint',
