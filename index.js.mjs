@@ -44,10 +44,6 @@ export default [
         destructuring: 'all',
         ignoreReadBeforeAssign: true,
       }],
-      'prefer-const': ['error', {
-        destructuring: 'all',
-        ignoreReadBeforeAssign: true,
-      }],
       quotes: ['error', 'single', {
         avoidEscape: true,
         allowTemplateLiterals: true,
