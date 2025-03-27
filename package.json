@@ -6,6 +6,12 @@
   "module": "index.ts.mjs",
   "types": "types.d.ts",
   "type": "module",
+  "files": [
+    "index.js.mjs",
+    "index.ts.mjs",
+    "types.d.ts",
+    "utils"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vuetifyjs/eslint-config-vuetify.git"
