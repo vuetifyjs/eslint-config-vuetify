@@ -40,6 +40,7 @@ export default defineConfig([
       }],
 
       // stylistic
+      '@stylistic/indent': ['error', 2],
       '@stylistic/array-bracket-spacing': ['error', 'never'],
       '@stylistic/arrow-parens': ['error', 'as-needed'],
       '@stylistic/comma-dangle': ['error', {
@@ -80,6 +81,7 @@ export default defineConfig([
     name: 'app/overrides',
     files: ['**/*.vue'],
     rules: {
+      '@stylistic/indent': 'off',
       'vue/html-closing-bracket-newline': ['error', {
         singleline: 'never',
         multiline: 'always',
