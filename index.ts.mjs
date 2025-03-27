@@ -1,7 +1,10 @@
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import config from './index.js.mjs'
+import {
+  defineConfigWithVueTs,
+  vueTsConfigs,
+} from '@vue/eslint-config-typescript'
 
-export default [
-  ...vueTsEslintConfig(),
+export default defineConfigWithVueTs([
+  vueTsConfigs.recommended,
   ...config,
-]
+])

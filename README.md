@@ -5,9 +5,17 @@
 ### 💿 Install
 
 ```bash
-yarn add eslint-config-vuetify -D
-# OR
 npm install eslint-config-vuetify --save-dev
+```
+OR
+
+```bash
+yarn add eslint-config-vuetify -D
+``` 
+OR
+
+```bash
+pnpm add eslint-config-vuetify -D
 ```
 
 ### 🚀 Usage
