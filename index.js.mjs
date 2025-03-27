@@ -2,13 +2,12 @@ import pluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
-import { defineConfig } from 'eslint/config'
 import { defu } from 'defu'
 import { loadAutoImports } from './utils/autoimports.js'
 
 const autoImports = loadAutoImports()
 
-export default defineConfig([
+export default [
   eslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
@@ -109,4 +108,4 @@ export default defineConfig([
       'vue/valid-v-slot': ['error', { allowModifiers: true }],
     },
   },
-])
+]
