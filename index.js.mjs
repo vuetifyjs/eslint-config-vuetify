@@ -3,7 +3,7 @@ import globals from 'globals'
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
-import { loadAutoImports } from './utils/autoimports.js'
+import { loadAutoImports } from './utils/autoimports.mjs'
 
 const autoImports = loadAutoImports()
 
