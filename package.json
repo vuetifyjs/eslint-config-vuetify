@@ -4,6 +4,7 @@
   "description": "eslint config for vue.js projects",
   "main": "index.js.mjs",
   "module": "index.ts.mjs",
+  "types": "types.d.ts",
   "type": "module",
   "repository": {
     "type": "git",
