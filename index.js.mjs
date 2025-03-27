@@ -3,6 +3,10 @@ import globals from 'globals'
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
+import { defu } from 'defu'
+import { loadAutoImports } from './utils/autoimports.js'
+
+const autoImports = loadAutoImports()
 
 export default defineConfig([
   eslint.configs.recommended,
@@ -13,11 +17,12 @@ export default defineConfig([
     plugins: {
       '@stylistic': stylistic,
     },
-    languageOptions: {
+    languageOptions: defu(autoImports, {
       globals: {
         ...globals.node,
+        ...globals.browser,
       },
-    },
+    }),
     rules: {
       complexity: ['error', 32],
       'no-case-declarations': 'off',
