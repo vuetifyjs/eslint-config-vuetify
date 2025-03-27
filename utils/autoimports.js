@@ -12,7 +12,7 @@ export function loadAutoImports () {
   try {
     const autoImportModuleURL = resolveModuleURL(resolve('.', autoImportsFile), { try: true })
     if (!autoImportModuleURL) return {}
-    
+
     const jiti = createJiti(import.meta.url)
     return jiti(autoImportModuleURL) ?? {}
   } catch {
