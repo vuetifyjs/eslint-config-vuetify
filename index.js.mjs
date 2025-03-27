@@ -54,8 +54,11 @@ export default [
         exports: 'always-multiline',
         functions: 'only-multiline',
       }],
+      '@stylistic/eol-last': ['error', 'always'],
       '@stylistic/multiline-ternary': 'off',
       '@stylistic/no-extra-semi': 'error',
+      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0 }],
+      '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single', {
         allowTemplateLiterals: true,
