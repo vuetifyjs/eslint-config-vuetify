@@ -7,4 +7,10 @@ import {
 export default defineConfigWithVueTs([
   vueTsConfigs.recommended,
   ...config,
+  {
+    // False positive for variables in type declarations
+    rules: {
+      'no-unused-vars': 'off',
+    },
+  },
 ])
