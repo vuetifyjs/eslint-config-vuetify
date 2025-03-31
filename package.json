@@ -21,6 +21,8 @@
     }
   },
   "files": [
+    "index.js.mjs.d.ts",
+    "index.ts.mjs.d.ts",
     "index.js.mjs",
     "index.ts.mjs",
     "types.d.ts",
