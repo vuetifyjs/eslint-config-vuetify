@@ -24,9 +24,7 @@
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "^9.23.0",
-    "vue": "^3.5.13",
-    "vuetify": "^3.7.19"
+    "eslint": "^9.23.0"
   },
   "dependencies": {
     "@eslint/js": "^9.23.0",
