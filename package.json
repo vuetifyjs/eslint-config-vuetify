@@ -26,6 +26,7 @@
     "index.js.mjs",
     "index.ts.mjs",
     "types.d.ts",
+    "tsconfig.json",
     "utils"
   ],
   "repository": {
