@@ -8,16 +8,16 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./index.js.mjs",
-      "types": "./types.d.ts"
+      "types": "./types.d.ts",
+      "import": "./index.js.mjs"
     },
     "./index.js.mjs": {
-      "import": "./index.js.mjs",
-      "types": "./types.d.ts"
+      "types": "./types.d.ts",
+      "import": "./index.js.mjs"
     },
     "./index.ts.mjs": {
-      "import": "./index.ts.mjs",
-      "types": "./types.d.ts"
+      "types": "./types.d.ts",
+      "import": "./index.ts.mjs"
     }
   },
   "files": [
