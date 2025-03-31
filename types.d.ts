@@ -5,10 +5,10 @@ declare module 'eslint-config-vuetify' {
   export default config;
 }
 
-declare module './index.js.mjs' {
+declare module 'eslint-config-vuetify/index.js.mjs' {
   const config: Linter.Config[];
 }
 
-declare module './index.ts.mjs' {
+declare module 'eslint-config-vuetify/index.ts.mjs' {
   const config: Linter.Config[];
 }
