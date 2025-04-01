@@ -57,7 +57,7 @@ export default [
       '@stylistic/eol-last': ['error', 'always'],
       '@stylistic/multiline-ternary': 'off',
       '@stylistic/no-extra-semi': 'error',
-      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0 }],
+      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0, 'maxBOF': 0 }],
       '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/object-curly-spacing': ['error', 'always'],
