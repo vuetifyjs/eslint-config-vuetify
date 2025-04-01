@@ -4,10 +4,12 @@ import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
 import { loadAutoImports } from './utils/autoimports.mjs'
+import { globalIgnores } from 'eslint/config'
 
 const autoImports = loadAutoImports()
 
 export default [
+  globalIgnores(['dist/**'], 'ignore dist folder'),
   eslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
