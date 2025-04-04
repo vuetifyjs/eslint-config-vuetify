@@ -4,10 +4,12 @@ import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import { defu } from 'defu'
 import { loadAutoImports } from './utils/autoimports.mjs'
+import { globalIgnores } from 'eslint/config'
 
 const autoImports = loadAutoImports()
 
 export default [
+  globalIgnores(['dist/**'], 'ignore dist folder'),
   eslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   {
@@ -57,7 +59,8 @@ export default [
       '@stylistic/eol-last': ['error', 'always'],
       '@stylistic/multiline-ternary': 'off',
       '@stylistic/no-extra-semi': 'error',
-      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0 }],
+      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 0, 'maxBOF': 0 }],
+      '@stylistic/no-multi-spaces': 'error',
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single', {

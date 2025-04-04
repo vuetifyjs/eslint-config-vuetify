@@ -6,7 +6,23 @@
   "module": "index.ts.mjs",
   "types": "types.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types.d.ts",
+      "import": "./index.js.mjs"
+    },
+    "./index.js.mjs": {
+      "types": "./types.d.ts",
+      "import": "./index.js.mjs"
+    },
+    "./index.ts.mjs": {
+      "types": "./types.d.ts",
+      "import": "./index.ts.mjs"
+    }
+  },
   "files": [
+    "index.js.mjs.d.ts",
+    "index.ts.mjs.d.ts",
     "index.js.mjs",
     "index.ts.mjs",
     "types.d.ts",
