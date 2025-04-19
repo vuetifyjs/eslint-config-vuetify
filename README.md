@@ -12,29 +12,21 @@
 
 ### 💿 Install
 
-<!-- automd:pm-install dev auto=false separate -->
+<!-- automd:pm-install dev auto=false -->
 
 ```sh
 # npm
 npm install -D eslint-config-vuetify
-```
 
-```sh
 # yarn
 yarn add -D eslint-config-vuetify
-```
 
-```sh
 # pnpm
 pnpm install -D eslint-config-vuetify
-```
 
-```sh
 # bun
 bun install -D eslint-config-vuetify
-```
 
-```sh
 # deno
 deno install --dev eslint-config-vuetify
 ```
