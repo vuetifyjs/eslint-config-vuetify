@@ -113,12 +113,9 @@ Copyright (c) 2016-present Vuetify LLC
 
 ----
 
-<!-- automd:contributors -->
+This project exists and thrives thanks to all the wonderful people who contribute 😍
 
-Made by [community](https://github.com/vuetifyjs/eslint-config-vuetify/graphs/contributors) 
 <br><br>
 <a href="https://github.com/vuetifyjs/eslint-config-vuetify/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=vuetifyjs/eslint-config-vuetify" />
 </a>
-
-<!-- /automd -->
