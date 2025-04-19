@@ -1,33 +1,84 @@
 # eslint-config-vuetify
->
-> An opinionated eslint config for Vuetify.
+
+<!-- automd:badges color="blue" license -->
+
+[![npm version](https://img.shields.io/npm/v/eslint-config-vuetify?color=blue)](https://npmjs.com/package/eslint-config-vuetify)
+[![npm downloads](https://img.shields.io/npm/dm/eslint-config-vuetify?color=blue)](https://npm.chart.dev/eslint-config-vuetify)
+[![license](https://img.shields.io/github/license/vuetifyjs/eslint-config-vuetify?color=blue)](https://github.com/vuetifyjs/eslint-config-vuetify/blob/main/LICENSE)
+
+<!-- /automd -->
+
+✨ An opinionated eslint config for Vuetify, crafted to keep your code clean and consistent!
 
 ### 💿 Install
 
-```bash
-npm install eslint-config-vuetify --save-dev
-```
-OR
+<!-- automd:pm-install dev auto=false separate -->
 
-```bash
-yarn add eslint-config-vuetify -D
-``` 
-OR
-
-```bash
-pnpm add eslint-config-vuetify -D
+```sh
+# npm
+npm install -D eslint-config-vuetify
 ```
+
+```sh
+# yarn
+yarn add -D eslint-config-vuetify
+```
+
+```sh
+# pnpm
+pnpm install -D eslint-config-vuetify
+```
+
+```sh
+# bun
+bun install -D eslint-config-vuetify
+```
+
+```sh
+# deno
+deno install --dev eslint-config-vuetify
+```
+
+<!-- /automd -->
 
 ### 🚀 Usage
 
 Update your `eslint.config.js` flat config to _extend_ vuetify:
 
 ```js
-import vuetify from 'eslint-config-vuetify';
+import withConfig from 'eslint-config-vuetify';
 
-export default [
-  ...vuetify,
-]
+export default withConfig()
+```
+
+Most features are automatically detected, but you can explicitly turn them on/off or customize them
+
+```js
+import withConfig from 'eslint-config-vuetify';
+
+export default withConfig({
+  vue: true,
+  ts: {
+    preset: 'all'
+  }
+})
+```
+
+You can even pass your own configs, right after the options: 
+
+```js
+import withConfig from 'eslint-config-vuetify';
+import love from 'eslint-config-love'
+
+export default withConfig({
+  ts: {
+    preset: 'recommendedTypeChecked'
+  }
+},
+{
+  ...love,
+  files: ['**/*.js', '**/*.ts'],
+})
 ```
 
 ### 💪 Supporting Vuetify
@@ -59,3 +110,15 @@ export default [
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016-present Vuetify LLC
+
+----
+
+<!-- automd:contributors -->
+
+Made by [community](https://github.com/vuetifyjs/eslint-config-vuetify/graphs/contributors) 
+<br><br>
+<a href="https://github.com/vuetifyjs/eslint-config-vuetify/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=vuetifyjs/eslint-config-vuetify" />
+</a>
+
+<!-- /automd -->
