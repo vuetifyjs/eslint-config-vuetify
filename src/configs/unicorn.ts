@@ -22,6 +22,8 @@ export function unicorn (options: Options['unicorn'] = true): TypedFlatConfigIte
         'unicorn/number-literal-case': 'off',
         'unicorn/template-indent': 'off',
         'unicorn/prevent-abbreviations': 'off',
+        'unicorn/prefer-top-level-await': 'off',
+        'unicorn/prefer-spread': 'off',
         'unicorn/no-await-expression-member': 'off',
         'unicorn/no-useless-undefined': 'off',
         'unicorn/no-array-reduce': 'off',
