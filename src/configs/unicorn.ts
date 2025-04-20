@@ -4,7 +4,7 @@ import type { TypedFlatConfigItem } from '../types'
 import { unicornVendor } from '../vendors'
 
 export function unicorn (options: Options['unicorn'] = true): TypedFlatConfigItem[] {
-  const filesConfig = (typeof options === 'boolean')
+  const filesConfig = (typeof options === 'boolean' || !options.files)
     ? {}
     : { files: options.files }
   return [

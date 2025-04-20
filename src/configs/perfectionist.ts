@@ -4,7 +4,7 @@ import type { TypedFlatConfigItem } from '../types'
 import { perfectionistPlugin } from '../vendors'
 
 export function perfectionist (options: Options['perfectionist'] = true): TypedFlatConfigItem[] {
-  const filesConfig = (typeof options === 'boolean')
+  const filesConfig = (typeof options === 'boolean' || !options.files)
     ? {}
     : { files: options.files }
   const importRules = options === true || (options && options?.import !== false)
