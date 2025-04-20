@@ -3,7 +3,7 @@ import { hasFile, hasPackage, isInEditorEnv } from './utils'
 
 const baseBoolSchema = v.exactOptional(
   v.union([v.boolean(), v.object({ files: v.array(v.string()) })]),
-  true
+  true,
 )
 
 export const tsPresets = v.union([
@@ -22,7 +22,7 @@ export const typescriptSchema = v.exactOptional(
       preset: v.exactOptional(tsPresets, 'recommended'),
     }),
   ]),
-  hasPackage('typescript')
+  hasPackage('typescript'),
 )
 
 export const vueSchema = v.exactOptional(
@@ -33,7 +33,7 @@ export const vueSchema = v.exactOptional(
       a11y: v.exactOptional(v.boolean()),
     }),
   ]),
-  hasPackage('vue') || hasPackage('@vue/compat')
+  hasPackage('vue') || hasPackage('@vue/compat'),
 )
 
 export const perfectionistSchema = v.exactOptional(
@@ -45,14 +45,14 @@ export const perfectionistSchema = v.exactOptional(
       export: v.exactOptional(v.boolean()),
     }),
   ]),
-  true
+  true,
 )
 
 const globalSchema = v.record(
   v.string(),
   v.union([
     v.boolean(), v.literal('off'), v.literal('readable'), v.literal('readonly'), v.literal('writable'), v.literal('writeable'),
-  ])
+  ]),
 )
 
 export const autoImportsSchema = v.exactOptional(
@@ -63,7 +63,7 @@ export const autoImportsSchema = v.exactOptional(
       src: v.exactOptional(v.union([v.string(), v.object({ globals: globalSchema })])),
     }),
   ]),
-  true
+  true,
 )
 
 export const stylisticSchema = baseBoolSchema
@@ -80,7 +80,7 @@ export const testSchema = v.exactOptional(
       files: v.exactOptional(v.array(v.string())),
     }),
   ]),
-  hasPackage('jest') || hasPackage('vitest')
+  hasPackage('jest') || hasPackage('vitest'),
 )
 
 export const gitignoreSchema = v.exactOptional(
@@ -91,7 +91,7 @@ export const gitignoreSchema = v.exactOptional(
       gitmodules: v.exactOptional(v.array(v.string())),
     }),
   ]),
-  hasFile('.gitignore')
+  hasFile('.gitignore'),
 )
 
 export const pnpmSchema = v.exactOptional(
@@ -106,7 +106,7 @@ export const ignoreSchema = v.exactOptional(
       extendIgnore: v.exactOptional(v.array(v.string())),
     }),
   ]),
-  true
+  true,
 )
 
 export const optionsSchema = v.strictObject({

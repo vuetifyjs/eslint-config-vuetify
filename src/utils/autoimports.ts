@@ -1,11 +1,11 @@
-import type { Options } from '../schema';
+import type { Options } from '../schema'
 import type { TypedFlatConfigItem } from '../types'
 import { resolve } from 'node:path'
 
 import { FlatCompat } from '@eslint/eslintrc'
 import { createResolver } from 'exsolve'
 
-const compat = new FlatCompat({});
+const compat = new FlatCompat({})
 
 const DEFAULT_AUTO_IMPORTS_PATH = '.eslintrc-auto-import'
 

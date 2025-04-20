@@ -5,6 +5,6 @@ export default withConfig(
     files: ['**/*.js'],
     rules: {
       '@stylistic/comma-dangle': ['error', 'never'],
-      'import/default': 'off',
-    },
+      'import/default': 'off'
+    }
   })

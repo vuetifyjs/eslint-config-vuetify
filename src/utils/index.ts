@@ -49,7 +49,7 @@ export function hasFile (file: string): boolean {
   return existsSync(resolve(process.cwd(), file))
 }
 
-export async function getPackageManager (){
+export async function getPackageManager () {
   return detect({ cwd: process.cwd() })
 }
 

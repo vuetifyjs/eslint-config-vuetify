@@ -22,7 +22,7 @@ const configs = await concat(
   test({ runner: 'vitest' }),
   test({ runner: 'jest' }),
   ignore(),
-  jsonc(true, true)
+  jsonc(true, true),
 )
 
 const configNames = configs.map(i => i.name).filter(Boolean) as string[]

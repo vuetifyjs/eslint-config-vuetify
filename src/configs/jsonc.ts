@@ -7,7 +7,7 @@ import { jsoncParser } from '../vendors'
 
 export async function jsonc (
   options: Options['json'],
-  stylistic: Options['stylistic']
+  stylistic: Options['stylistic'],
 ): Promise<TypedFlatConfigItem[]> {
   const files = (typeof options === 'boolean') ? [GLOB_JSON, GLOB_JSONC, GLOB_JSON5] : options?.files ?? [GLOB_JSON, GLOB_JSONC]
 
@@ -56,17 +56,17 @@ export async function jsonc (
 
         ...stylistic
           ? {
-            'jsonc/array-bracket-spacing': ['error', 'never'],
-            'jsonc/comma-dangle': ['error', 'never'],
-            'jsonc/comma-style': ['error', 'last'],
-            'jsonc/indent': ['error', 2],
-            'jsonc/key-spacing': ['error', { afterColon: true, beforeColon: false }],
-            'jsonc/object-curly-newline': ['error', { consistent: true, multiline: true }],
-            'jsonc/object-curly-spacing': ['error', 'always'],
-            'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-            'jsonc/quote-props': 'error',
-            'jsonc/quotes': 'error',
-          }
+              'jsonc/array-bracket-spacing': ['error', 'never'],
+              'jsonc/comma-dangle': ['error', 'never'],
+              'jsonc/comma-style': ['error', 'last'],
+              'jsonc/indent': ['error', 2],
+              'jsonc/key-spacing': ['error', { afterColon: true, beforeColon: false }],
+              'jsonc/object-curly-newline': ['error', { consistent: true, multiline: true }],
+              'jsonc/object-curly-spacing': ['error', 'always'],
+              'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+              'jsonc/quote-props': 'error',
+              'jsonc/quotes': 'error',
+            }
           : {},
       },
     },

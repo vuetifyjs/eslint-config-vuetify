@@ -8,9 +8,7 @@ import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../globs'
 
 export function js (options: Options['js'] = true): TypedFlatConfigItem[] {
   const files = (typeof options === 'boolean')
-    ? [
-      GLOB_JS, GLOB_TS, GLOB_JSX, GLOB_TSX,
-    ]
+    ? [GLOB_JS, GLOB_TS, GLOB_JSX, GLOB_TSX]
     : options.files
 
   return [

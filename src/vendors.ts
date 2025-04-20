@@ -10,7 +10,7 @@ export { plugin as pnpmPlugin } from 'eslint-plugin-pnpm'
 
 // vendors
 export { default as tseslintVendor } from 'typescript-eslint'
-export { default as unicornVendor } from 'eslint-plugin-unicorn';
+export { default as unicornVendor } from 'eslint-plugin-unicorn'
 export { default as vueVendor } from 'eslint-plugin-vue'
 
 // parsers
