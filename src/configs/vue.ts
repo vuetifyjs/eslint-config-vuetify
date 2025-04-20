@@ -94,7 +94,10 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
       name: 'vuetify/vue',
       plugins,
       processor: vueVendor.processors['.vue'],
-      rules,
+      rules: {
+        ...rules,
+        'vue/block-lang': tsEnabled ? 'off' : ['error', { script: { lang: 'ts' } }],
+      },
     },
     {
       name: 'vuetify/vue/jsx',
