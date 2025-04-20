@@ -2,7 +2,7 @@ import * as v from 'valibot'
 import { hasFile, hasPackage, isInEditorEnv } from './utils'
 
 const baseBoolSchema = v.exactOptional(
-  v.union([v.boolean(), v.object({ files: v.array(v.string()) })]),
+  v.union([v.boolean(), v.object({ files: v.exactOptional(v.array(v.string())) })]),
   true,
 )
 
@@ -18,7 +18,7 @@ export const typescriptSchema = v.exactOptional(
   v.union([
     v.boolean(),
     v.object({
-      files: v.array(v.string()),
+      files: v.exactOptional(v.array(v.string())),
       preset: v.exactOptional(tsPresets, 'recommended'),
     }),
   ]),
@@ -29,7 +29,7 @@ export const vueSchema = v.exactOptional(
   v.union([
     v.boolean(),
     v.object({
-      files: v.array(v.string()),
+      files: v.exactOptional(v.array(v.string())),
       a11y: v.exactOptional(v.boolean()),
     }),
   ]),
@@ -40,7 +40,7 @@ export const perfectionistSchema = v.exactOptional(
   v.union([
     v.boolean(),
     v.object({
-      files: v.array(v.string()),
+      files: v.exactOptional(v.array(v.string())),
       import: v.exactOptional(v.boolean()),
       export: v.exactOptional(v.boolean()),
     }),
@@ -59,7 +59,7 @@ export const autoImportsSchema = v.exactOptional(
   v.union([
     v.boolean(),
     v.object({
-      files: v.array(v.string()),
+      files: v.exactOptional(v.array(v.string())),
       src: v.exactOptional(v.union([v.string(), v.object({ globals: globalSchema })])),
     }),
   ]),
