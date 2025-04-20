@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ES2020",
+    "module": "ES2022",
     "moduleResolution": "bundler",
     "moduleDetection": "force",
     "esModuleInterop": true,
