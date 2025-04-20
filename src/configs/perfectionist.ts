@@ -7,8 +7,8 @@ export function perfectionist (options: Options['perfectionist'] = true): TypedF
   const filesConfig = (typeof options === 'boolean')
     ? {}
     : { files: options.files }
-  const importRules = options === true || (options && options?.import === true)
-  const exportRules = options === true || (options && options?.export === true)
+  const importRules = options === true || (options && options?.import !== false)
+  const exportRules = options === true || (options && options?.export !== false)
   if (!importRules && !exportRules) {
     return []
   }
