@@ -3,11 +3,11 @@ import type { TypedFlatConfigItem } from '../types'
 import { GLOB_VUE } from '../globs'
 import { interopDefault } from '../utils'
 
-export async function stylistic (options: Options['stylistic'] = true): Promise<TypedFlatConfigItem[]> {
+export async function stylistic (options: Options['stylistic'] = true, optionsVue: Options['vue'] = false): Promise<TypedFlatConfigItem[]> {
   if (!options) {
     return []
   }
-  return [
+  const stylistic: TypedFlatConfigItem[] = [
     {
       name: 'vuetify/stylistic',
       plugins: { '@stylistic': await interopDefault(import('@stylistic/eslint-plugin')) },
@@ -73,10 +73,13 @@ export async function stylistic (options: Options['stylistic'] = true): Promise<
         '@stylistic/array-bracket-newline': ['error', { multiline: true, minItems: 4 }],
       },
     },
-    {
+  ]
+  if (optionsVue) {
+    stylistic.push({
       files: [GLOB_VUE],
       name: 'vuetify/stylistic/vue',
-      rules: { '@stylistic/indent': 'off' },
-    },
-  ]
+      rules: { '@stylistic/indent': ['off'] },
+    })
+  }
+  return stylistic
 }

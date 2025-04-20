@@ -42,7 +42,7 @@ export async function buildConfig (maybeOptions?: Options | TypedFlatConfigItem,
   }
 
   if (vOptions.stylistic) {
-    configsToCompose.push(stylistic(vOptions.stylistic))
+    configsToCompose.push(stylistic(vOptions.stylistic, vOptions.vue))
   }
 
   if (vOptions.imports) {
