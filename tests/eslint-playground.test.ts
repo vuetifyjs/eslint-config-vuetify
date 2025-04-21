@@ -31,6 +31,15 @@ describe('lint: work with playground with config', () => {
       { config: [null] },
       { config: [undefined] },
       { config: [{}] },
+      // test different ts presets
+      { config: [{ ts: { preset: 'strict' } }] },
+      { config: [{ ts: { preset: 'recommendedTypeChecked' } }] },
+      { config: [{ ts: { preset: 'all' } }] },
+      // test perfectionist
+      { config: [{ perfectionist: true }] },
+      { config: [{ perfectionist: { imports: true } }] },
+      // test config as first argument
+      { config: [{ rules: { 'no-semi': 'off' } }], files: ['playground/App.jsx'] },
     ] as Array<{ config: Array<any>, files?: Array<string> }>
 
     for (const arg of args) {
