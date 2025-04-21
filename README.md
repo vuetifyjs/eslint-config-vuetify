@@ -56,7 +56,7 @@ export default withConfig({
 })
 ```
 
-You can even pass your own configs, right after the options: 
+You can also provide additional ESLint configurations after specifying the options:
 
 ```js
 import withConfig from 'eslint-config-vuetify';
