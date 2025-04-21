@@ -63,6 +63,7 @@ import withConfig from 'eslint-config-vuetify';
 import love from 'eslint-config-love'
 
 export default withConfig({
+  imports: false, // disable imports plugin as `love` comes with own version
   ts: {
     preset: 'recommendedTypeChecked'
   }
