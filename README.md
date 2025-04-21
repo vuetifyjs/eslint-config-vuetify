@@ -56,21 +56,33 @@ export default withConfig({
 })
 ```
 
-You can also provide additional ESLint configurations after specifying the options:
+You can provide additional ESLint configurations after the options object, or directly specify them for simpler use cases where the default settings work fine:
 
 ```js
-import withConfig from 'eslint-config-vuetify';
-import love from 'eslint-config-love'
+import withConfig from 'eslint-config-vuetify'
+
+export default withConfig(
+  {
+    pnpm: false,
+  },
+  {
+    plugins: {
+      sonarjs,
+    },
+    rules: {
+      ...sonarjs.configs.recommended.rules,
+    },
+  }
+)
+```
+
+```js
+import withConfig from 'eslint-config-vuetify'
 
 export default withConfig({
-  imports: false, // disable imports plugin as `love` comes with own version
-  ts: {
-    preset: 'recommendedTypeChecked'
-  }
-},
-{
-  ...love,
-  files: ['**/*.js', '**/*.ts'],
+  rules: {
+    'no-console': 'error',
+  },
 })
 ```
 
