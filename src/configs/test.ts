@@ -16,7 +16,7 @@ export async function test (options: Options['test'] = true): Promise<TypedFlatC
   const files = options?.files ?? GLOB_TESTS
   const runner = options?.runner
   if (runner === 'vitest') {
-    assertPackage('@vitest/eslint-plugin')
+    await assertPackage('@vitest/eslint-plugin', 'test: false')
     const vitestVendor = await interopDefault(import('@vitest/eslint-plugin'))
     // @ts-ignore
     const noOnlyTests = await interopDefault(import('eslint-plugin-no-only-tests'))
@@ -36,7 +36,7 @@ export async function test (options: Options['test'] = true): Promise<TypedFlatC
     return config as TypedFlatConfigItem
   }
   if (runner === 'jest') {
-    assertPackage('eslint-plugin-jest')
+    await assertPackage('eslint-plugin-jest', 'test: false')
     const jestVendor = await interopDefault(import('eslint-plugin-jest'))
     // @ts-ignore
     const noOnlyTests = await interopDefault(import('eslint-plugin-no-only-tests'))

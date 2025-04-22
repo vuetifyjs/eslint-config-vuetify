@@ -80,7 +80,7 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
   }
 
   if (typeof options === 'object' && options?.a11y) {
-    assertPackage('eslint-plugin-vuejs-accessibility')
+    await assertPackage('eslint-plugin-vuejs-accessibility', 'vue.a11y: false')
     const a11yVendor = await interopDefault(import('eslint-plugin-vuejs-accessibility'))
     a11config = a11yVendor.configs['flat/recommended']
   }
