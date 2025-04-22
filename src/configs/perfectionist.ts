@@ -1,4 +1,5 @@
 import type { Options } from '../schema'
+import type { RuleOptions } from '../typegen'
 import type { TypedFlatConfigItem } from '../types'
 
 import { perfectionistPlugin } from '../vendors'
@@ -13,7 +14,7 @@ export function perfectionist (options: Options['perfectionist'] = true): TypedF
     return []
   }
 
-  const rules: Record<string, any> = {}
+  const rules: Partial<RuleOptions> = {}
   if (importRules) {
     rules['perfectionist/sort-imports'] = [
       'error',
