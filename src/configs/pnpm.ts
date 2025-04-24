@@ -1,6 +1,8 @@
 import type { TypedFlatConfigItem } from '../types'
-
+import { hasFile } from '../utils'
 import { jsoncParser, pnpmPlugin, yamlParser } from '../vendors'
+
+const hasWorkspace = hasFile('pnpm-workspace.yaml') || hasFile('pnpm-workspace.yml')
 
 export function pnpm (): TypedFlatConfigItem[] {
   return [
@@ -11,7 +13,7 @@ export function pnpm (): TypedFlatConfigItem[] {
       name: 'vuetify/pnpm/package-json',
       plugins: { pnpm: pnpmPlugin },
       rules: {
-        'pnpm/json-prefer-workspace-settings': 'error',
+        'pnpm/json-prefer-workspace-settings': hasWorkspace ? 'error' : 'off',
         'pnpm/json-valid-catalog': 'error',
       },
     },
