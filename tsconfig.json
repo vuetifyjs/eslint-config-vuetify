@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "Node16",
-    "moduleResolution": "Node16",
-    "strict": true,
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./",
-    "paths": {
-      "*": ["types.d.ts", "index.js.mjs", "index.ts.mjs"]
-    }
-  },
-  "include": ["**/*.ts", "**/*.d.ts"]
+    "allowImportingTsExtensions": true,
+    "noImplicitOverride": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+  }
 }
