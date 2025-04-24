@@ -38,17 +38,17 @@ deno install --dev eslint-config-vuetify
 Update your `eslint.config.js` flat config to _extend_ vuetify:
 
 ```js
-import withConfig from 'eslint-config-vuetify';
+import vuetify from 'eslint-config-vuetify';
 
-export default withConfig()
+export default vuetify()
 ```
 
 Most features are automatically detected, but you can explicitly turn them on/off or customize them
 
 ```js
-import withConfig from 'eslint-config-vuetify';
+import vuetify from 'eslint-config-vuetify';
 
-export default withConfig({
+export default vuetify({
   vue: true,
   ts: {
     preset: 'all'
@@ -59,9 +59,9 @@ export default withConfig({
 You can provide additional ESLint configurations after the options object, or directly specify them for simpler use cases where the default settings work fine:
 
 ```js
-import withConfig from 'eslint-config-vuetify'
+import vuetify from 'eslint-config-vuetify'
 
-export default withConfig(
+export default vuetify(
   {
     pnpm: false,
   },
@@ -77,9 +77,9 @@ export default withConfig(
 ```
 
 ```js
-import withConfig from 'eslint-config-vuetify'
+import vuetify from 'eslint-config-vuetify'
 
-export default withConfig({
+export default vuetify({
   rules: {
     'no-console': 'error',
   },

@@ -1,5 +1,5 @@
 import { ESLint } from 'eslint'
-import withConfig from 'eslint-config-vuetify'
+import vuetify from 'eslint-config-vuetify'
 import { describe, expect, it } from 'vitest'
 
 const cwd = new URL('..', import.meta.url).pathname
@@ -47,7 +47,7 @@ describe('lint: work with playground with config', () => {
       it('should lint playground with config without fatal errors', async () => {
         const eslint = new ESLint({
           cwd,
-          overrideConfig: await withConfig(...arg.config),
+          overrideConfig: await vuetify(...arg.config),
         })
         const results = await eslint.lintFiles(filesToCheck)
         expect(results.length).toBe(1)
@@ -67,7 +67,7 @@ describe('lint: work with playground with config', () => {
       await expect(async () => {
         const eslint = new ESLint({
           cwd,
-          overrideConfig: await withConfig(...config),
+          overrideConfig: await vuetify(...config),
         })
         await eslint.lintFiles(['playground/App.jsx'])
       }).rejects.toThrow()

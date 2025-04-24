@@ -1,3 +1,3 @@
-import withConfig from 'eslint-config-vuetify'
+import vuetify from 'eslint-config-vuetify'
 
-export default withConfig()
+export default vuetify()
