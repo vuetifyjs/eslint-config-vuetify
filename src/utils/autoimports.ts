@@ -24,7 +24,7 @@ export function loadAutoImports (options: Options['autoimports'] = true): TypedF
     if (!autoImportModuleURL) {
       return {}
     }
-    return compat.extends(autoImportModuleURL) as TypedFlatConfigItem
+    return compat.extends(autoImportModuleURL)[0] ?? {}
   } catch {
     return {}
   }
