@@ -28,6 +28,7 @@ export async function stylistic (options: Options['stylistic'] = true, optionsVu
           },
         ],
         '@stylistic/brace-style': ['error', '1tbs'],
+        '@stylistic/arrow-parens': ['error', 'as-needed'],
       },
     },
   ]
