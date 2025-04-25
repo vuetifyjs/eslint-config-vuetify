@@ -33,6 +33,7 @@ export function unicorn (options: Options['unicorn'] = true): TypedFlatConfigIte
         'unicorn/import-style': 'off',
         'unicorn/prefer-module': 'off',
         'unicorn/consistent-function-scoping': 'off',
+        'unicorn/prefer-global-this': 'off',
       },
     },
   ]
