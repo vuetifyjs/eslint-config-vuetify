@@ -10,7 +10,7 @@ import { typescriptCore } from './ts'
 
 const vueTs = (preset: TsPresets) => typescriptCore(preset)
   .filter(config => config.name !== 'typescript-eslint/base')
-  .map((config) => {
+  .map(config => {
     return {
       ...config,
       files: [GLOB_VUE],

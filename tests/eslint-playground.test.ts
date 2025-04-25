@@ -12,7 +12,7 @@ describe('lint: work with playground', () => {
     'playground/App.vue',
   ]
 
-  it.each(playgroundFiles)('should lint %s without fatal errors', async (file) => {
+  it.each(playgroundFiles)('should lint %s without fatal errors', async file => {
     const eslint = new ESLint({
       cwd,
     })
