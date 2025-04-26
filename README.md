@@ -1,10 +1,10 @@
 # eslint-config-vuetify
 
-<!-- automd:badges color="blue" license -->
+<!-- automd:badges color="blue" license="MIT" -->
 
 [![npm version](https://img.shields.io/npm/v/eslint-config-vuetify?color=blue)](https://npmjs.com/package/eslint-config-vuetify)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-config-vuetify?color=blue)](https://npm.chart.dev/eslint-config-vuetify)
-[![license](https://img.shields.io/github/license/vuetifyjs/eslint-config-vuetify?color=blue)](https://github.com/vuetifyjs/eslint-config-vuetify/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <!-- /automd -->
 
