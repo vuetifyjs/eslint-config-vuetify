@@ -7,6 +7,7 @@ export async function stylistic (options: Options['stylistic'] = true, optionsVu
   if (!options) {
     return []
   }
+  const severity = (options === true || !options?.severity) ? 'error' : options.severity
   const stylisticPlugin = await interopDefault(import('@stylistic/eslint-plugin'))
   const stylistic: TypedFlatConfigItem[] = [
     {
@@ -18,17 +19,18 @@ export async function stylistic (options: Options['stylistic'] = true, optionsVu
           jsx: true,
           quotes: 'single',
           semi: false,
+          severity,
         }).rules,
         '@stylistic/space-before-function-paren': [
-          'error',
+          severity,
           {
             anonymous: 'always',
             asyncArrow: 'always',
             named: 'always',
           },
         ],
-        '@stylistic/brace-style': ['error', '1tbs'],
-        '@stylistic/arrow-parens': ['error', 'as-needed'],
+        '@stylistic/brace-style': [severity, '1tbs'],
+        '@stylistic/arrow-parens': [severity, 'as-needed'],
       },
     },
   ]
