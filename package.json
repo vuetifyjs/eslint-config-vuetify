@@ -8,6 +8,8 @@
     "build": "node --run typegen && unbuild",
     "prepack": "node --run build",
     "stub": "unbuild --stub",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "vitest run",
     "dev": "vitest",
     "dev:prepare": "node --run typegen && node --run stub"
