@@ -8,15 +8,17 @@ import { assertPackage, interopDefault } from '../utils'
 import { tseslintVendor, vueParser, vueVendor } from '../vendors'
 import { typescriptCore } from './ts'
 
-const vueTs = (preset: TsPresets) => typescriptCore(preset)
-  .filter(config => config.name !== 'typescript-eslint/base')
-  .map(config => {
-    return {
-      ...config,
-      files: [GLOB_VUE],
-      name: `vuetify/vue/${config.name?.replace('vuetify/', '') || 'anonymous'}`,
-    }
-  }) as TypedFlatConfigItem[]
+function vueTs (preset: TsPresets) {
+  return typescriptCore(preset)
+    .filter(config => config.name !== 'typescript-eslint/base')
+    .map(config => {
+      return {
+        ...config,
+        files: [GLOB_VUE],
+        name: `vuetify/vue/${config.name?.replace('vuetify/', '') || 'anonymous'}`,
+      }
+    }) as TypedFlatConfigItem[]
+}
 
 const recommendedRules = vueVendor.configs['flat/recommended']
   .map(c => c.rules)
