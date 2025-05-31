@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
-    "eslint-config-vuetify": "file:../eslint-config-vuetify",
+    "eslint-config-vuetify": "file:",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "unbuild": "^3.5.0",
