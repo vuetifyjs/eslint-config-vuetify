@@ -1,3 +1,4 @@
+export { antfu } from './antfu'
 export { autoimports } from './autoimports'
 export { gitignore } from './gitignore'
 export { ignore } from './ignore'
