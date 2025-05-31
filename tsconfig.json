@@ -6,7 +6,6 @@
     "moduleDetection": "force",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
     "resolveJsonModule": true,
     "strict": true,
     "isolatedModules": true,
