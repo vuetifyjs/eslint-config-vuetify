@@ -2,8 +2,9 @@ import type { Awaitable } from 'eslint-flat-config-utils'
 import { existsSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
 import { confirm, outro, spinner } from '@clack/prompts'
+import { createResolver } from 'exsolve'
 import { blue, underline } from 'kolorist'
-import { isPackageExists } from 'local-pkg'
+import { getPackageInfoSync, isPackageExists } from 'local-pkg'
 import { addDevDependency } from 'nypm'
 import { detect } from 'package-manager-detector'
 
@@ -42,6 +43,10 @@ export function isInGitHooksOrLintStaged (): boolean {
 
 export function hasPackage (pkg: string, scope?: string): boolean {
   return isPackageExists(pkg, { paths: scope ? [scope] : [] })
+}
+
+export function getPackageVersion (pkg: string): string | undefined {
+  return getPackageInfoSync(pkg, { paths: [currentScope] })?.version
 }
 
 const currentScope = new URL('.', import.meta.url).pathname
@@ -83,4 +88,17 @@ export async function getPackageManager () {
   return detect({ cwd: process.cwd() })
 }
 
+const { resolveModulePath } = createResolver({ extensions: ['.js', '.mjs', '.cjs', '.ts', '.mts', '.cts'] })
+export const configUrl = resolveModulePath('./eslint.config', { try: true })
+
 export { loadAutoImports } from './autoimports'
+
+export function isVersionAtLeast (version: string, targetVersion: `${number}.${number}.${number}`) {
+  const [vMajor, vMinor, vPatch] = version.split('.').map(Number) as [number, number, number]
+  const [major, minor, patch] = targetVersion.split('.').map(Number) as [number, number, number]
+  return (
+    vMajor > major
+    || (vMajor === major && vMinor > minor)
+    || (vMajor === major && vMinor === minor && vPatch >= patch)
+  )
+}

@@ -66,11 +66,22 @@ export const autoImportsSchema = v.exactOptional(
   true,
 )
 
-export const stylisticSchema = baseBoolSchema
+export const stylisticSchema = v.exactOptional(
+  v.union([
+    v.boolean(),
+    v.object({
+      files: v.exactOptional(v.array(v.string())),
+      severity: v.exactOptional(v.union([v.literal('error'), v.literal('warn')])),
+    }),
+  ]),
+  hasPackage('typescript'),
+)
+
 export const jsSchema = baseBoolSchema
 export const importsSchema = baseBoolSchema
 export const unicornSchema = baseBoolSchema
 export const jsonCSchema = baseBoolSchema
+export const antfuSchema = baseBoolSchema
 
 export const testSchema = v.exactOptional(
   v.union([
@@ -124,6 +135,7 @@ export const optionsSchema = v.strictObject({
   imports: importsSchema,
   unicorn: unicornSchema,
   json: jsonCSchema,
+  antfu: antfuSchema,
 })
 
 export type Options = v.InferInput<typeof optionsSchema>

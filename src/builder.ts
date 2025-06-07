@@ -6,7 +6,7 @@ import type { ConfigNames } from './typegen'
 import type { TypedFlatConfigItem } from './types'
 
 import { composer, concat } from 'eslint-flat-config-utils'
-import { autoimports, gitignore, ignore, imports, js, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'
+import { antfu, autoimports, gitignore, ignore, imports, js, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'
 import { getFirstConfigType, type Options, validateOptions } from '../src/schema'
 import { getPackageManager } from './utils'
 
@@ -59,6 +59,10 @@ export async function buildConfig (maybeOptions?: Options | TypedFlatConfigItem,
 
   if (vOptions.test) {
     configsToCompose.push(test(vOptions.test))
+  }
+
+  if (vOptions.antfu) {
+    configsToCompose.push(antfu(vOptions.antfu))
   }
 
   const pnpmEnabled = vOptions.pnpm ?? (await getPackageManager())?.name === 'pnpm'
