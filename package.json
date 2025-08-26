@@ -62,7 +62,7 @@
     "eslint-plugin-perfectionist": "^4.13.0",
     "eslint-plugin-pnpm": "^0.3.1",
     "eslint-plugin-regexp": "^2.7.0",
-    "eslint-plugin-unicorn": "^59.0.1",
+    "eslint-plugin-unicorn": "^60.0.0",
     "eslint-plugin-vue": "^10.1.0",
     "eslint-typegen": "^2.2.0",
     "exsolve": "^1.0.5",
@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
-    "eslint": "^9.28.0",
+    "eslint": "^9.34.0",
     "eslint-config-vuetify": "file:",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
