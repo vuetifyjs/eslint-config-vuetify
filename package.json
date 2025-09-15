@@ -15,7 +15,8 @@
     "lint:fix": "eslint --fix",
     "test": "vitest run",
     "dev": "vitest",
-    "dev:prepare": "node --run typegen && node --run stub"
+    "dev:prepare": "node --run typegen && node --run stub",
+    "release": "bumpp"
   },
   "exports": {
     ".": {
@@ -79,6 +80,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.18.3",
+    "bumpp": "^10.2.3",
     "eslint": "^9.35.0",
     "eslint-config-vuetify": "file:",
     "tsx": "^4.20.5",
