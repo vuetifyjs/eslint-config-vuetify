@@ -17,8 +17,6 @@ export function imports (options: Options['imports'] = true): TypedFlatConfigIte
         'import/no-duplicates': ['error', { 'prefer-inline': false }],
         'import/no-mutable-exports': 'error',
         'import/no-named-default': 'error',
-        'import/no-self-import': 'error',
-        'import/no-webpack-loader-syntax': 'error',
       },
     },
   ]

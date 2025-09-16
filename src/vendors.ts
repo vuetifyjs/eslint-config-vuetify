@@ -4,7 +4,7 @@
 export { default as gitignoreConfig } from 'eslint-config-flat-gitignore'
 
 // plugins
-export * as importPlugin from 'eslint-plugin-import-x'
+export { default as importPlugin } from 'eslint-plugin-import-lite'
 export { default as perfectionistPlugin } from 'eslint-plugin-perfectionist'
 export { plugin as pnpmPlugin } from 'eslint-plugin-pnpm'
 
