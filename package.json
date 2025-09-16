@@ -49,6 +49,20 @@
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-vuejs-accessibility": "^2.0.0"
   },
+  "peerDependenciesMeta": {
+    "eslint-plugin-jest": {
+      "optional": true
+    },
+    "eslint-plugin-no-only-tests": {
+      "optional": true
+    },
+    "@vitest/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-vuejs-accessibility": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "@eslint/eslintrc": "^3.3.1",
