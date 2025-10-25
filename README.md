@@ -38,7 +38,7 @@ deno install --dev eslint-config-vuetify
 Update your `eslint.config.js` flat config to _extend_ vuetify:
 
 ```js
-import vuetify from 'eslint-config-vuetify';
+import vuetify from 'eslint-config-vuetify'
 
 export default vuetify()
 ```
@@ -46,13 +46,13 @@ export default vuetify()
 Most features are automatically detected, but you can explicitly turn them on/off or customize them
 
 ```js
-import vuetify from 'eslint-config-vuetify';
+import vuetify from 'eslint-config-vuetify'
 
 export default vuetify({
   vue: true,
   ts: {
-    preset: 'all'
-  }
+    preset: 'all',
+  },
 })
 ```
 
@@ -72,7 +72,7 @@ export default vuetify(
     rules: {
       ...sonarjs.configs.recommended.rules,
     },
-  }
+  },
 )
 ```
 
