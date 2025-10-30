@@ -20,6 +20,7 @@ export const typescriptSchema = v.exactOptional(
     v.object({
       files: v.exactOptional(v.array(v.string())),
       preset: v.exactOptional(tsPresets, 'recommended'),
+      projectService: v.exactOptional(v.boolean()),
     }),
   ]),
   hasPackage('typescript'),

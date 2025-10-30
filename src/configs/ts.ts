@@ -59,9 +59,16 @@ export function typescript (options: Options['ts'] = true): TypedFlatConfigItem[
     return []
   }
   const preset = (options === true || !options?.preset) ? 'recommended' : options.preset
+  const projectService = (typeof options === 'object' && options?.projectService) || ['recommendedTypeChecked', 'strictTypeChecked', 'all'].includes(preset)
   return [
     ...typescriptCore(preset),
-
+    {
+      languageOptions: {
+        parserOptions: {
+          projectService,
+        },
+      },
+    },
     {
       files: ['**/*.d.ts'],
       name: 'vuetify/typescript/dts',
