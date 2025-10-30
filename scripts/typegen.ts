@@ -1,8 +1,8 @@
-import fs from 'node:fs/promises'
+import { writeFileSync } from 'node:fs'
 import { concat } from 'eslint-flat-config-utils'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
-import { builtinRules } from 'eslint/use-at-your-own-risk'
 
+import { builtinRules } from 'eslint/use-at-your-own-risk'
 import { antfu, autoimports, gitignore, ignore, imports, js, jsonc, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'
 
 console.log('Generating typegen.d.ts...')
@@ -34,6 +34,6 @@ dts += `
 export type ConfigNames = ${configNames.map(i => `'${i}'`).join(' | ')}
 `
 
-await fs.writeFile('src/typegen.d.ts', dts)
+writeFileSync('src/typegen.d.ts', dts)
 
 console.log('Generated typegen.d.ts')
