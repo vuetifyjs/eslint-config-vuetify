@@ -47,6 +47,7 @@ describe('lint: work with playground with config', () => {
       it('should lint playground with config without fatal errors', async () => {
         const eslint = new ESLint({
           cwd,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
           overrideConfig: await vuetify(...arg.config),
         })
         const results = await eslint.lintFiles(filesToCheck)
@@ -67,6 +68,7 @@ describe('lint: work with playground with config', () => {
       await expect(async () => {
         const eslint = new ESLint({
           cwd,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
           overrideConfig: await vuetify(...config),
         })
         await eslint.lintFiles(['playground/App.jsx'])

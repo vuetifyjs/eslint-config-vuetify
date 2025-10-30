@@ -1,3 +1,4 @@
+import type { BasePackageJson } from './types'
 import { readFile, writeFile } from 'node:fs/promises'
 import { relative } from 'node:path'
 import { confirm, intro, log, outro, spinner } from '@clack/prompts'
@@ -101,7 +102,7 @@ export async function main () {
 
   // Add lint and lint:fix scripts to package.json
   if (hasFile('package.json')) {
-    const packageJson = JSON.parse(await readFile('package.json', 'utf8'))
+    const packageJson = JSON.parse(await readFile('package.json', 'utf8')) as BasePackageJson
     if (!packageJson.scripts) {
       packageJson.scripts = {}
     }

@@ -10,3 +10,5 @@ export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>
 export type Awaitable<T> = T | Promise<T>
 
 export type Arrayable<T> = T | T[]
+
+export * from './package'

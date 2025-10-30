@@ -60,7 +60,7 @@ export function typescript (options: Options['ts'] = true): TypedFlatConfigItem[
   }
   const preset = (options === true || !options?.preset) ? 'recommended' : options.preset
   return [
-    ...typescriptCore(preset) as TypedFlatConfigItem[],
+    ...typescriptCore(preset),
 
     {
       files: ['**/*.d.ts'],

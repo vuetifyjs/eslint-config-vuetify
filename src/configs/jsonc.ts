@@ -17,7 +17,7 @@ export async function jsonc (
     {
       name: 'vuetify/jsonc/setup',
       plugins: {
-        jsonc: jsoncPlugin as any,
+        jsonc: jsoncPlugin,
       },
     },
     {

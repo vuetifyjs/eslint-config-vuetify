@@ -17,12 +17,12 @@ function vueTs (preset: TsPresets) {
         files: [GLOB_VUE],
         name: `vuetify/vue/${config.name?.replace('vuetify/', '') || 'anonymous'}`,
       }
-    }) as TypedFlatConfigItem[]
+    })
 }
 
 const recommendedRules = vueVendor.configs['flat/recommended']
   .map(c => c.rules)
-  .reduce((acc, c) => ({ ...acc, ...c }), {}) as any
+  .reduce((acc, c) => ({ ...acc, ...c }), {})
 
 const rules = {
   ...recommendedRules,
@@ -75,7 +75,7 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
       sourceType: 'module',
       parser: tseslintVendor.parser,
     },
-  } as any
+  }
 
   if (tsEnabled) {
     plugins['@typescript-eslint'] = tseslintVendor.plugin as ESLint.Plugin
@@ -95,7 +95,7 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
       languageOptions,
       name: 'vuetify/vue',
       plugins,
-      processor: vueVendor.processors['.vue'],
+      processor: vueVendor.processors['.vue'] as string,
       rules: {
         ...rules,
         'vue/block-lang': tsEnabled ? 'off' : ['error', { script: { lang: 'ts' } }],
@@ -106,7 +106,7 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
       files: [GLOB_VUE, GLOB_TSX, GLOB_JSX],
       languageOptions,
       plugins,
-      processor: vueVendor.processors['.vue'],
+      processor: vueVendor.processors['.vue'] as string,
       rules: {
         'vue/attributes-order': ['error', { alphabetical: true }],
         'vue/custom-event-name-casing': ['error', 'kebab-case', { ignores: ['/^[a-z]+(?:-[a-z]+)*:[a-z]+(?:-[a-z]+)*$/u'] }],

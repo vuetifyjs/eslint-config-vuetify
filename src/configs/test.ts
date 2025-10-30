@@ -38,7 +38,6 @@ export async function test (options: Options['test'] = true): Promise<TypedFlatC
   if (runner === 'jest') {
     await assertPackage('eslint-plugin-jest', 'test: false')
     const jestVendor = await interopDefault(import('eslint-plugin-jest'))
-    // @ts-ignore
     const noOnlyTests = await interopDefault(import('eslint-plugin-no-only-tests'))
     const config = [
       {
