@@ -79,10 +79,20 @@ export const stylisticSchema = v.exactOptional(
 )
 
 export const jsSchema = baseBoolSchema
-export const importsSchema = baseBoolSchema
 export const unicornSchema = baseBoolSchema
 export const jsonCSchema = baseBoolSchema
 export const antfuSchema = baseBoolSchema
+
+export const importsSchema = v.exactOptional(
+  v.union([
+    v.boolean(),
+    v.object({
+      files: v.exactOptional(v.array(v.string())),
+      plugin: v.exactOptional(v.union([v.literal('import-lite'), v.literal('import-x')]), 'import-lite'),
+    }),
+  ]),
+  true,
+)
 
 export const testSchema = v.exactOptional(
   v.union([

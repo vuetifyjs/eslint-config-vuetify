@@ -50,6 +50,9 @@
     "eslint-plugin-vuejs-accessibility": "^2.0.0"
   },
   "peerDependenciesMeta": {
+    "eslint-plugin-import-x": {
+      "optional": true
+    },
     "eslint-plugin-jest": {
       "optional": true
     },
