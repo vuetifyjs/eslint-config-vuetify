@@ -71,12 +71,12 @@ export async function main () {
       const s = spinner()
       s.start('Installing dependencies...')
       if (packagesToInstall.length > 0) {
-        await addDevDependency(packagesToInstall, { silent: true })
+        await addDevDependency(packagesToInstall)
       }
       if (packagesToUpgrade.length > 0) {
         const packageManager = await getPackageManager()
         const upgradeCommand = resolveCommand(packageManager!.agent, 'upgrade', packagesToUpgrade)
-        await x(upgradeCommand!.command, upgradeCommand!.args.concat(['--silent']))
+        await x(upgradeCommand!.command, upgradeCommand!.args)
       }
       s.stop('Dependencies installed!')
     }

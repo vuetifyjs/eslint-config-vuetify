@@ -14,7 +14,7 @@ export async function interopDefault<T> (m: Awaitable<T>): Promise<T extends {
   default: infer U
 } ? U : T> {
   const awaited = await m
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
+
   return (awaited as any).default ?? awaited
 }
 
@@ -64,7 +64,7 @@ export async function assertPackage (pkg: string, setting?: string): Promise<voi
     if (result === true) {
       const s = spinner()
       s.start(`Installing ${pkg}`)
-      await addDevDependency(pkg, { silent: true })
+      await addDevDependency(pkg)
       s.stop(`Installed ${pkg}`)
       outro('Please, rerun the command or reopen your editor to apply the changes')
     } else {
