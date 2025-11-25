@@ -1,20 +1,24 @@
+import type { Options } from '../schema'
 import type { TypedFlatConfigItem } from '../types'
 import { hasFile } from '../utils'
 import { jsoncParser, pnpmPlugin, yamlParser } from '../vendors'
 
-const hasWorkspace = hasFile('pnpm-workspace.yaml') || hasFile('pnpm-workspace.yml')
+const hasWorkspace = hasFile('pnpm-workspace.yaml')
 
-export function pnpm (): TypedFlatConfigItem[] {
+export function pnpm (options: Options['pnpm'] = true): TypedFlatConfigItem[] {
+  const enforceCatalog = typeof options === 'object' ? (options.enforceCatalog ?? true) : true
+  const packageJsonFiles = (typeof options === 'object' && options.files) ? options.files : ['package.json', '**/package.json']
   return [
     {
       ignores: ['**/node_modules/**', '**/dist/**'],
-      files: ['package.json', '**/package.json'],
+      files: packageJsonFiles,
       languageOptions: { parser: jsoncParser },
       name: 'vuetify/pnpm/package-json',
       plugins: { pnpm: pnpmPlugin },
       rules: {
         'pnpm/json-prefer-workspace-settings': hasWorkspace ? 'error' : 'off',
-        'pnpm/json-valid-catalog': 'error',
+        'pnpm/json-enforce-catalog': enforceCatalog ? 'error' : 'off',
+        'pnpm/json-valid-catalog': enforceCatalog ? 'error' : 'off',
       },
     },
     {

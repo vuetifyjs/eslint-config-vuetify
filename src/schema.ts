@@ -107,7 +107,13 @@ export const gitignoreSchema = v.exactOptional(
 )
 
 export const pnpmSchema = v.exactOptional(
-  v.union([v.boolean()]),
+  v.union([
+    v.boolean(),
+    v.object({
+      files: v.exactOptional(v.array(v.string())),
+      enforceCatalog: v.exactOptional(v.boolean()),
+    }),
+  ]),
 )
 
 export const ignoreSchema = v.exactOptional(

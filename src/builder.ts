@@ -65,10 +65,12 @@ export async function buildConfig (maybeOptions?: Options | TypedFlatConfigItem,
     configsToCompose.push(antfu(vOptions.antfu))
   }
 
-  const pnpmEnabled = vOptions.pnpm ?? (await getPackageManager())?.name === 'pnpm'
+  const pnpmEnabled = (vOptions.pnpm === undefined)
+    ? (await getPackageManager())?.name === 'pnpm'
+    : Boolean(vOptions.pnpm)
 
   if (pnpmEnabled) {
-    configsToCompose.push(pnpm())
+    configsToCompose.push(pnpm(vOptions.pnpm))
   }
 
   if (maybeConfigType === 'config' && maybeOptions) {
