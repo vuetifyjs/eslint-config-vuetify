@@ -6,7 +6,7 @@ import { jsoncParser, pnpmPlugin, yamlParser } from '../vendors'
 const hasWorkspace = hasFile('pnpm-workspace.yaml')
 
 export function pnpm (options: Options['pnpm'] = true): TypedFlatConfigItem[] {
-  const enforceCatalog = typeof options === 'object' ? (options.enforceCatalog ?? true) : true
+  const enforceCatalog = typeof options === 'object' ? (options.enforceCatalog ?? false) : false
   const packageJsonFiles = (typeof options === 'object' && options.files) ? options.files : ['package.json', '**/package.json']
   return [
     {
