@@ -66,6 +66,14 @@
       "optional": true
     }
   },
+  "scripts": {
+    "release": "bumpp -r"
+  },
+  "devDependencies": {
+    "bumpp": "^10.1.0",
+    "conventional-changelog-vuetify": "^2.0.2",
+    "conventional-github-releaser": "^3.1.5"
+  },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "@eslint/eslintrc": "^3.3.1",
