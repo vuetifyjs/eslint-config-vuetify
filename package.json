@@ -16,7 +16,7 @@
     "test": "vitest run",
     "dev": "vitest",
     "dev:prepare": "node --run typegen && node --run stub",
-    "release": "bumpp"
+    "release": "bumpp -r"
   },
   "exports": {
     ".": {
@@ -66,14 +66,6 @@
       "optional": true
     }
   },
-  "scripts": {
-    "release": "bumpp -r"
-  },
-  "devDependencies": {
-    "bumpp": "^10.1.0",
-    "conventional-changelog-vuetify": "^2.0.2",
-    "conventional-github-releaser": "^3.1.5"
-  },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "@eslint/eslintrc": "^3.3.1",
@@ -106,6 +98,8 @@
   "devDependencies": {
     "@types/node": "^22.18.13",
     "bumpp": "^10.3.1",
+    "conventional-changelog-vuetify": "^2.0.2",
+    "conventional-github-releaser": "^3.1.5",
     "eslint": "^9.38.0",
     "eslint-config-vuetify": "file:",
     "tsx": "^4.20.6",
