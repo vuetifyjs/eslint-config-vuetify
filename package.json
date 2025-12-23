@@ -98,8 +98,7 @@
   "devDependencies": {
     "@types/node": "^22.19.3",
     "bumpp": "^10.3.2",
-    "conventional-changelog-vuetify": "^2.0.2",
-    "conventional-github-releaser": "^3.1.5",
+    "changelogithub": "^14.0.0",
     "eslint": "^9.39.2",
     "eslint-config-vuetify": "file:",
     "tsx": "^4.21.0",
