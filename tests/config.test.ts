@@ -53,7 +53,7 @@ describe('validateOptions: full and edge case validation', () => {
 
 describe('validateOptions: partial and matrix edge cases', () => {
   const matrix = [
-    { key: 'ts', values: [true, false, { files: ['src/**/*.ts'] }, { preset: 'strict' }, { files: ['src/a.ts'], preset: 'all' }] },
+    { key: 'ts', values: [true, false, { files: ['src/**/*.ts'] }, { preset: 'strict' }, { files: ['src/a.ts'], preset: 'all' }, { tsconfigRootDir: '/path/to/root' }] },
     { key: 'vue', values: [true, false, { files: ['src/**/*.vue'] }, { a11y: true }, { files: ['src/a.vue'], a11y: false }] },
     { key: 'perfectionist', values: [true, false, { files: ['src/**/*.js'] }, { import: true }, { export: false }, { import: false, export: false }] },
   ]

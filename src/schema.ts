@@ -21,6 +21,7 @@ export const typescriptSchema = v.exactOptional(
       files: v.exactOptional(v.array(v.string())),
       preset: v.exactOptional(tsPresets, 'recommended'),
       projectService: v.exactOptional(v.boolean()),
+      tsconfigRootDir: v.exactOptional(v.string()),
     }),
   ]),
   hasPackage('typescript'),

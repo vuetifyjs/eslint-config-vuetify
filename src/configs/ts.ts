@@ -60,12 +60,15 @@ export function typescript (options: Options['ts'] = true): TypedFlatConfigItem[
   }
   const preset = (options === true || !options?.preset) ? 'recommended' : options.preset
   const projectService = (typeof options === 'object' && options?.projectService) || ['recommendedTypeChecked', 'strictTypeChecked', 'all'].includes(preset)
+  const tsconfigRootDir = typeof options === 'object' ? options?.tsconfigRootDir : undefined
+
   return [
     ...typescriptCore(preset),
     {
       languageOptions: {
         parserOptions: {
           projectService,
+          tsconfigRootDir,
         },
       },
     },
