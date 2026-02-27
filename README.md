@@ -1,12 +1,18 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.vuetifyjs.com/docs/images/one/logos/veslint-config-logo-dark.png">
+    <img alt="Vuetify ESLint Config Logo" src="https://cdn.vuetifyjs.com/docs/images/one/logos/veslint-config-logo-light.png" height="100">
+  </picture>
+</div>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/eslint-config-vuetify"><img src="https://img.shields.io/npm/v/eslint-config-vuetify.svg" alt="npm version"></a>
+  <a href="https://npm.chart.dev/eslint-config-vuetify"><img src="https://img.shields.io/npm/dm/eslint-config-vuetify?color=blue" alt="npm downloads"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://community.vuetifyjs.com"><img src="https://discordapp.com/api/guilds/340160225338195969/widget.png" alt="Discord"></a>
+</p>
+
 # eslint-config-vuetify
-
-<!-- automd:badges color="blue" license="MIT" -->
-
-[![npm version](https://img.shields.io/npm/v/eslint-config-vuetify?color=blue)](https://npmjs.com/package/eslint-config-vuetify)
-[![npm downloads](https://img.shields.io/npm/dm/eslint-config-vuetify?color=blue)](https://npm.chart.dev/eslint-config-vuetify)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-<!-- /automd -->
 
 ✨ An opinionated eslint config for Vuetify, crafted to keep your code clean and consistent!
 
