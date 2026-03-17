@@ -1,9 +1,7 @@
-import type { Linter } from 'eslint'
-
-import type { Arrayable, Awaitable, FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { ConfigNames } from './typegen'
-
 import type { TypedFlatConfigItem } from './types'
+import type { Linter } from 'eslint'
+import type { Arrayable, Awaitable, FlatConfigComposer } from 'eslint-flat-config-utils'
 
 import { composer, concat } from 'eslint-flat-config-utils'
 import { antfu, autoimports, gitignore, ignore, imports, js, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'

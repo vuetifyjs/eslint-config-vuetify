@@ -2,7 +2,6 @@ import type { Options } from '../schema'
 import type { TypedFlatConfigItem } from '../types'
 
 import eslint from '@eslint/js'
-
 import globals from 'globals'
 import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../globs'
 

@@ -1,5 +1,4 @@
 import type { Options } from '../schema'
-
 import type { TypedFlatConfigItem } from '../types'
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
 import { interopDefault } from '../utils'

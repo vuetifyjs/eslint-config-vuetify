@@ -1,7 +1,6 @@
-import type { ESLint } from 'eslint'
-
 import type { Options, TsPresets } from '../schema'
 import type { TypedFlatConfigItem } from '../types'
+import type { ESLint } from 'eslint'
 
 import { GLOB_JSX, GLOB_TSX, GLOB_VUE } from '../globs'
 import { assertPackage, interopDefault } from '../utils'
