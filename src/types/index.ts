@@ -1,5 +1,5 @@
-import type { Linter } from 'eslint'
 import type { RuleOptions } from '../typegen'
+import type { Linter } from 'eslint'
 
 interface Rules extends RuleOptions {}
 

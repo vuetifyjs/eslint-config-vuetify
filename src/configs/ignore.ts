@@ -1,5 +1,4 @@
 import type { Options } from '../schema'
-
 import type { TypedFlatConfigItem } from '../types'
 
 import { globalIgnores } from 'eslint/config'

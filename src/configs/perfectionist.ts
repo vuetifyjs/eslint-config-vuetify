@@ -22,15 +22,13 @@ export function perfectionist (options: Options['perfectionist'] = true): TypedF
         groups: [
           'type',
           [
-            'parent-type', 'sibling-type', 'index-type', 'internal-type',
+            'type-parent', 'type-sibling', 'type-index', 'type-internal',
           ],
-
           'builtin',
           'external',
           'internal',
           ['parent', 'sibling', 'index'],
           'side-effect',
-          'object',
           'unknown',
         ],
         newlinesBetween: 'ignore',
