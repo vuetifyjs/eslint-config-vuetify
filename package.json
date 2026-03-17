@@ -8,23 +8,20 @@
   },
   "scripts": {
     "typegen": "tsx scripts/typegen.ts",
-    "build": "node --run typegen && unbuild",
+    "build": "node --run typegen && tsdown",
     "prepack": "node --run build",
-    "stub": "unbuild --stub",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest run",
     "dev": "vitest",
-    "dev:prepare": "node --run typegen && node --run stub",
+    "dev:prepare": "node --run typegen",
     "release": "bumpp -r"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -101,12 +98,15 @@
     "changelogithub": "^14.0.0",
     "eslint": "^9.39.4",
     "eslint-config-vuetify": "file:",
+    "tsdown": "^0.21.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "unbuild": "^3.6.1",
     "valibot": "^1.2.0",
     "vitest": "^4.1.0",
     "vue": "^3.5.30"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "inlinedDependencies": {
+    "valibot": "1.2.0"
+  }
 }
