@@ -33,8 +33,9 @@ describe('lint: work with playground with config', () => {
       { config: [{}] },
       // test different ts presets
       { config: [{ ts: { preset: 'strict' } }] },
-      { config: [{ ts: { preset: 'recommendedTypeChecked' } }] },
-      { config: [{ ts: { preset: 'all' } }] },
+      // type-checked presets require files to be in tsconfig (projectService)
+      { config: [{ ts: { preset: 'recommendedTypeChecked' } }], files: ['playground/App.ts'] },
+      { config: [{ ts: { preset: 'all' } }], files: ['playground/App.ts'] },
       // test perfectionist
       { config: [{ perfectionist: true }] },
       { config: [{ perfectionist: { imports: true } }] },

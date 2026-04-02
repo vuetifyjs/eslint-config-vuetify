@@ -1,5 +1,11 @@
 minimumReleaseAge: 4320
 
+minimumReleaseAgeExclude:
+  - typescript-eslint
+  - '@typescript-eslint/*'
+  - eslint
+  - '@eslint/*'
+
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
