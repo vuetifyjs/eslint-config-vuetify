@@ -15,7 +15,10 @@
     "allowImportingTsExtensions": true,
     "noImplicitOverride": true,
     "noEmit": true,
+    "skipLibCheck": true,
     "jsx": "preserve",
     "jsxImportSource": "vue"
-  }
+  },
+  "include": ["src/**/*", "scripts/**/*", "tests/**/*", "playground/**/*"],
+  "exclude": ["dist", "node_modules"]
 }

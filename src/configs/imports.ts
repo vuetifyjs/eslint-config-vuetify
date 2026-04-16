@@ -14,6 +14,7 @@ export async function imports (options: Options['imports'] = true): Promise<Type
   let selectedPlugin
   if (pluginType === 'import-x') {
     await assertPackage('eslint-plugin-import-x', 'import: { plugin: "import-lite" }')
+    // @ts-expect-error — optional peer dependency, not installed by default
     selectedPlugin = (await import('eslint-plugin-import-x')).default
   } else {
     selectedPlugin = (await import('eslint-plugin-import-lite')).default

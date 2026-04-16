@@ -1,4 +1,5 @@
 import type { Options, TsPresets } from '../schema'
+import type { RuleOptions } from '../typegen'
 import type { TypedFlatConfigItem } from '../types'
 import type { ESLint } from 'eslint'
 
@@ -23,7 +24,7 @@ const recommendedRules = vueVendor.configs['flat/recommended']
   .map(c => c.rules)
   .reduce((acc, c) => ({ ...acc, ...c }), {})
 
-const rules = {
+const rules: Partial<RuleOptions> = {
   ...recommendedRules,
   'vue/html-closing-bracket-newline': [
     'error',
