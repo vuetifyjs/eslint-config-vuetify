@@ -44,6 +44,13 @@ const rules: Partial<RuleOptions> = {
   'vue/multi-word-component-names': 'off',
   'vue/multiline-html-element-content-newline': 'off',
   'vue/no-v-html': 'off',
+  'vue/padding-line-between-tags': [
+    'error',
+    [
+      { blankLine: 'always', prev: 'multiline', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'multiline' },
+    ],
+  ],
   'vue/script-indent': [
     'error',
     2,
