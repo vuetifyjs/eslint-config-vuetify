@@ -47,8 +47,8 @@ const rules: Partial<RuleOptions> = {
   'vue/padding-line-between-tags': [
     'error',
     [
-      { blankLine: 'always', prev: 'multiline', next: '*' },
-      { blankLine: 'always', prev: '*', next: 'multiline' },
+      { blankLine: 'always', prev: '*:multi-line', next: '*' },
+      { blankLine: 'always', prev: '*', next: '*:multi-line' },
     ],
   ],
   'vue/script-indent': [

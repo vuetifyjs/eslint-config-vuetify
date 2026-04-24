@@ -5,6 +5,7 @@ minimumReleaseAgeExclude:
   - '@typescript-eslint/*'
   - eslint
   - '@eslint/*'
+  - eslint-plugin-vue
 
 onlyBuiltDependencies:
   - esbuild

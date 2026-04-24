@@ -78,7 +78,7 @@
     "eslint-plugin-pnpm": "^1.6.0",
     "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-unicorn": "^63.0.0",
-    "eslint-plugin-vue": "^10.8.0",
+    "eslint-plugin-vue": "^10.9.0",
     "eslint-typegen": "^2.3.1",
     "exsolve": "^1.0.8",
     "globals": "^17.4.0",
