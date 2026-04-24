@@ -10,3 +10,7 @@ minimumReleaseAgeExclude:
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
+peerDependencyRules:
+  allowedVersions:
+    eslint-plugin-jest>eslint: ^10.0.0
+    eslint-plugin-vuejs-accessibility>eslint: ^10.0.0
