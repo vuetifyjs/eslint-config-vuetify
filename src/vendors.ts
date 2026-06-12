@@ -8,6 +8,7 @@ export { default as perfectionistPlugin } from 'eslint-plugin-perfectionist'
 export { plugin as pnpmPlugin } from 'eslint-plugin-pnpm'
 
 // vendors
+export { default as regexpVendor } from 'eslint-plugin-regexp'
 export { default as tseslintVendor } from 'typescript-eslint'
 export { default as unicornVendor } from 'eslint-plugin-unicorn'
 export { default as vueVendor } from 'eslint-plugin-vue'

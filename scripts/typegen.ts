@@ -2,7 +2,7 @@ import { writeFileSync } from 'node:fs'
 import { concat } from 'eslint-flat-config-utils'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
-import { antfu, autoimports, gitignore, ignore, imports, js, jsonc, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'
+import { antfu, autoimports, gitignore, ignore, imports, js, jsonc, perfectionist, pnpm, regexp, stylistic, test, ts, unicorn, vue } from '../src/configs'
 
 console.log('Generating typegen.d.ts...')
 
@@ -13,6 +13,7 @@ const configs = await concat(
   imports(),
   autoimports(),
   unicorn(),
+  regexp(),
   perfectionist(),
   vue(),
   ts(),
