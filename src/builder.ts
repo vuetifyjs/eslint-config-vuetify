@@ -4,7 +4,7 @@ import type { Linter } from 'eslint'
 import type { Arrayable, Awaitable, FlatConfigComposer } from 'eslint-flat-config-utils'
 
 import { composer, concat } from 'eslint-flat-config-utils'
-import { antfu, autoimports, gitignore, ignore, imports, js, perfectionist, pnpm, stylistic, test, ts, unicorn, vue } from '../src/configs'
+import { antfu, autoimports, gitignore, ignore, imports, js, perfectionist, pnpm, regexp, stylistic, test, ts, unicorn, vue } from '../src/configs'
 import { getFirstConfigType, type Options, validateOptions } from '../src/schema'
 import { getPackageManager } from './utils'
 
@@ -49,6 +49,10 @@ export async function buildConfig (maybeOptions?: Options | TypedFlatConfigItem,
 
   if (vOptions.unicorn) {
     configsToCompose.push(unicorn(vOptions.unicorn))
+  }
+
+  if (vOptions.regexp) {
+    configsToCompose.push(regexp(vOptions.regexp))
   }
 
   if (vOptions.ignore) {

@@ -80,6 +80,7 @@ export const stylisticSchema = v.exactOptional(
 )
 
 export const jsSchema = baseBoolSchema
+export const regexpSchema = baseBoolSchema
 export const unicornSchema = baseBoolSchema
 export const jsonCSchema = baseBoolSchema
 export const antfuSchema = baseBoolSchema
@@ -151,6 +152,7 @@ export const optionsSchema = v.strictObject({
   ignore: ignoreSchema,
   js: jsSchema,
   imports: importsSchema,
+  regexp: regexpSchema,
   unicorn: unicornSchema,
   json: jsonCSchema,
   antfu: antfuSchema,
