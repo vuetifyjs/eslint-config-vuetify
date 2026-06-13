@@ -84,6 +84,7 @@ export async function main () {
     log.info('All required dependencies are already installed.')
   }
 
+  // eslint-disable-next-line no-useless-assignment
   let overwriteConfig = false as boolean | symbol
   overwriteConfig = await (configUrl
     ? confirm({
