@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import type { Awaitable } from 'eslint-flat-config-utils'
 import { existsSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
@@ -78,6 +77,7 @@ export async function assertPackage (pkg: string, setting?: string): Promise<voi
       } else {
         outro(`Please, install the package or disable the setting in your ${configMessage} file`)
       }
+      // eslint-disable-next-line unicorn/no-process-exit
       process.exit(1)
     }
   }
