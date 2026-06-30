@@ -105,7 +105,7 @@ export async function vue (options: Options['vue'] = true, tsOptions: Options['t
       processor: vueVendor.processors['.vue'] as string,
       rules: {
         ...rules,
-        'vue/block-lang': tsEnabled ? 'off' : ['error', { script: { lang: 'ts' } }],
+        'vue/block-lang': tsEnabled ? ['error', { script: { lang: 'ts' } }] : 'off',
       },
     },
     {
